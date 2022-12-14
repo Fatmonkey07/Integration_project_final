@@ -141,6 +141,7 @@ if __name__ == "__main__":  # == is a boolean that checks if the values are
         # Expects: word, known letters
         # Modifies: Nothing
         # Returns: Nothing
+        # learned this docstring format from peps.python.org
 
         for number_counter in range(
                 len(word_parameter)):  # for loop is a loop used when the
@@ -176,7 +177,8 @@ if __name__ == "__main__":  # == is a boolean that checks if the values are
                 return "invalid_integer"
         except ValueError:
             if guess_parameter.lower() == "menu" or \
-                    guess_parameter.lower() == "m":
+                    guess_parameter.lower() == "m":  # learned how to use
+                # .lower() and .upper() from w3schools
                 # .lower() returns an all lowercase version of the string.
                 return "menu"
             else:
@@ -202,6 +204,7 @@ if __name__ == "__main__":  # == is a boolean that checks if the values are
                     f"choice:")
                 try:  # tries the code and stops if it reaches an error without
                     # crashing.
+                    # learned try except input from course website.
                     inp = int(inp) - 1
                     if inp in range(len(menu_options)):
                         selected = menu_options[inp]
@@ -214,7 +217,8 @@ if __name__ == "__main__":  # == is a boolean that checks if the values are
                     if inp.lower() in map(str.lower,
                                           menu_options):  # this map function
                         # returns the lowercase version of each menu option so
-                        # that it isn't cap sensitive.
+                        # that it isn't cap sensitive. learned how to use map
+                        # from w3schools
                         selected = inp[0].upper() + inp[
                                                     1:]  # changes the string
                         # so that the first letter is uppercase.
@@ -254,7 +258,7 @@ if __name__ == "__main__":  # == is a boolean that checks if the values are
                     main()
                     return
                 case "Exit":
-                    exit()
+                    exit()  # learned exit() from SA Andrew
 
 
     def finish(word_parameter, guesses,
@@ -292,5 +296,6 @@ if __name__ == "__main__":  # == is a boolean that checks if the values are
               end="|")  # sep changes
         # what separates the arguments in the print statement. end changes
         # the end character.
+
 
     main()
